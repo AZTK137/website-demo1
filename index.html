@@ -7,11 +7,28 @@
   <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; }
     header { background:#4b8de3; padding:60px 20px; text-align:center; }
-    section { background:#4b8de3; padding:40px 20px; }
+    .main-columns {
+      display: flex;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    section {
+      flex: 1;
+      background:#4b8de3;
+      padding:40px 20px;
+      border-radius: 10px;
+      min-width: 250px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      color: #fff;
+    }
     .button { display:inline-block; padding:10px 20px; border:1px solid #000; text-decoration:none; margin-top:20px; }
     .services { background:#3766a3; }
     .service-item { margin-bottom:20px; }
     footer { background:#4b8fa3; text-align:center; padding:20px; }
+    @media (max-width: 900px) {
+      .main-columns { flex-direction: column; }
+      section { margin-bottom: 20px; }
+    }
   </style>
 </head>
 <body>
@@ -21,38 +38,36 @@
     <a class="button" href="#contact">Book a Free Consultation</a>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div style="display:flex; align-items:center;">
-      <div>
-        <p>My name is Uril Parrish. I am a gym teacher who seeks to inspire my students and help them maintain a healthy lifestyle and relationships within their peers. I have experience of playing sports at a high level, college football to be exact. My goal is to help kids reach that same level of play and exceed it to hopefully make it far in life.</p>
+  <div class="main-columns">
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="images/images.png" alt="Photo of Uril Parrish" style="width:200px; border-radius:10px; margin-bottom:20px;" />
+      <p>My name is Uril Parrish. I am a gym teacher who seeks to inspire my students and help them maintain a healthy lifestyle and relationships within their peers. I have experience of playing sports at a high level, college football to be exact. My goal is to help kids reach that same level of play and exceed it to hopefully make it far in life.</p>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Services</h2>
+      <div class="service-item">
+        <h3>Personal Coaching Sessions</h3>
+        <p>One-on-one sessions tailored to your unique wellness needs.</p>
       </div>
-      <img src="images/images.png" alt="Photo of Uril Parrish" style="width:200px; margin-left:30px;" />
-    </div>
-  </section>
+      <div class="service-item">
+        <h3>Explosiveness Drills</h3>
+        <p>Helps your child achieve that needed explosiveness on the field to reach peak performance.</p>
+      </div>
+      <div class="service-item">
+        <h3>Juice Cleanse</h3>
+        <p>Alongside being Mr. Train and Maintain, I also have a juice cleansing business to help with weight loss and restoring lost energy.</p>
+      </div>
+    </section>
 
-  <section id="services" class="services">
-    <h2>Services</h2>
-    <div class="service-item">
-      <h3>Personal Coaching Sessions</h3>
-      <p>One-on-one sessions tailored to your unique wellness needs.</p>
-    </div>
-    <div class="service-item">
-      <h3>Explosiveness Drills</h3>
-      <p>Helps your child achieve that needed explosiveness on the field to reach peak performance.</p>
-    </div>
-    <div class="service-item">
-      <h3>Juice Cleanse</h3>
-      <p>Alongside being Mr. Train and Maintain, I also have a juice cleansing business to help with weight loss and restoring lost energy.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: contact@healthcoachdemo.com</p>
-    <p>Phone: (555) 123-4567</p>
-    <p>Follow us on Instagram @train.and.maintain</p>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: contact@healthcoachdemo.com</p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Follow us on Instagram @train.and.maintain</p>
+    </section>
+  </div>
 
   <footer>
     <p>© 2025 Healthy Life Coaching – Demo</p>
